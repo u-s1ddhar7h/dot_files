@@ -1,0 +1,72 @@
+##
+## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
+## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
+## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
+## CROSS-SHELL PROMPT
+##
+## Siddharth's starship configuration
+## The minimal, blazing-fast, and infinitely customizable prompt for any shell!
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$git_commit\
+$git_state\
+$line_break\
+$character
+"""
+
+################
+# Basic-Config #
+################
+command_timeout = 1000
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+[line_break]
+disabled = false
+
+[character]
+format = '$symbol '
+success_symbol = '[\[\]](#a6e3a1)'
+error_symbol = '[\[\]](#f38ba8)'
+vicmd_symbol = '[\[\]](#fe8019)'
+
+[directory]
+format = "[  ](fg:#1793d1 bg:#313244)[](fg:#313244)[ ](fg:#313244)[$path]($style)[](fg:#313244)"
+style = "fg:#cdd6f4 bg:#313244"
+read_only = "󰌾 "
+truncation_length = 2
+truncate_to_repo = false
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+always_show_remote = true
+format = "[ ](fg:#313244)[$branch]($style)[](fg:#313244 bg:#313244)[](fg:#a6d189 bg:#313244)[ ](fg:#000000 bg:#a6d189)[](fg:#a6d189)"
+style = "fg:#fab387 bg:#313244"
+
+[git_status]
+format="[ ](fg:#313244)[$all_status$ahead_behind]($style)[](fg:#313244 bg:#313244)[](fg:#94e2d5 bg:#313244)[ ](fg:#000000 bg:#94e2d5)[](fg:#94e2d5)"
+style = "fg:#fb4934 bg:#313244"
+
+[git_commit]
+format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
+style = "green"
+
+[git_state]
+rebase = "REBASING"
+merge =	"MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+style =	"yellow"
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+
