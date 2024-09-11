@@ -1,0 +1,10 @@
+[user]
+	name = Siddharth Upadhyay
+	email = s1ddhar7h.ofc@gmail.com
+[core]
+	editor = helix
+	autocrlf = input
+	safecrlf = warn
+	ui = true
+[init]
+	defaultBranch = main
