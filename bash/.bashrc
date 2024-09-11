@@ -16,3 +16,6 @@ alias updMirror="sudo reflector --verbose --connection-timeout 10 --download-tim
 
 eval "$(starship init bash)"
 
+# alias to automate to start SSH-Agent and key addition
+alias ssh_config='eval "$(ssh-agent  -s)" && ssh-add ~/.ssh/Remote_repos/id_ed25519'
+
