@@ -1,0 +1,114 @@
+#       .
+#       ###x.        .|
+#       d#####x,   ,v||
+#        '+#####v||||||
+#           ,v|||||+'.      _     _           _
+#        ,v|||||^'>####    | |   | |   ___   | | (_) __  __
+#       |||||^'  .v####    | |___| |  /   \  | |  _  \ \/ /
+#       ||||=..v#####P'    |  ___  | /  ^  | | | | |  \  /
+#       ''v'>#####P'       | |   | | |  ---  | | | |  /  \
+#       ,######/P||x.      |_|   |_|  \___/  |_| |_| /_/\_\
+#       ####P' "x|||||,
+#       |/'       'x|||    CONFIGURATION FILE
+#        '           '|
+
+# THEME
+theme = "catppuccin_mocha"
+
+# CURSOR
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+# EDITOR
+[editor]
+mouse = true
+middle-click-paste = true
+line-number = "relative"
+scroll-lines = 1
+cursorline = true
+scrolloff = 10
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+auto-completion = true
+auto-format = true
+completion-trigger-len = 3
+true-color = true
+color-modes = true
+rulers = [121]
+text-width = 120
+bufferline = "multiple"
+
+# AUTO-PAIRS
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+"'" = "'"
+'"' = '"'
+'`' = '`'
+'<' = '>'
+
+# INDENT-GUIDE
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well:"▏", "╎", "┆", "┊", "⸽"
+skip-levels = 1
+
+# SEARCH
+[editor.search]
+smart-case = true
+wrap-around = true
+
+# LSP
+[editor.lsp]
+enable = true
+display-messages = true
+auto-signature-help = true
+display-inlay-hints = true
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+# FILEPICKER
+[editor.file-picker]
+hidden = false
+follow-symlinks = true
+deduplicate-links = true
+parents = true
+ignore = true
+git-ignore = true
+git-exclude = false
+max-depth = 1
+
+# SOFT-WRAP
+[editor.soft-wrap]
+enable = true
+wrap-at-text-width = true
+
+# STATUSLINE
+[editor.statusline]
+left = [
+  "mode",
+  "file-type",
+  "version-control",
+  "spinner"
+]
+center = [
+  "file-modification-indicator",
+  "file-base-name",
+  "diagnostics",
+  "workspace-diagnostics"
+]
+right = [
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "position-percentage",
+  "total-line-numbers",
+]
+separator = "⸾"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
